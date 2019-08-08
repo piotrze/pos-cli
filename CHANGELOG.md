@@ -1,14 +1,15 @@
 # Changelog
 
 ## 4.1.3
-* Do not use colors when `CI=true`
-* Do not use notifier when `CI=true`
+* Do not use colors when `CI=true`.
+* Do not use notifier when `CI=true`.
+* Info logger is now communicating using stdout, not stderr.
 * Added 413 `Entity too large` server error support.
 * Added MIT License.
 
 ## 4.1.2 31 July 2019
 * Fixed some server errors not showing up in `pos-cli deploy`.
-* Fixed `--direct-assets-upload` modules assets deploy
+* Fixed `--direct-assets-upload` modules assets deploy.
 
 ## 4.1.1 30 July, 2019
 * Fixed cut off messages in notifier.
@@ -16,13 +17,13 @@
 ## 4.1.0 30 July, 2019
 * Improved performance of repetitive http requests (sync, logs, deploy status etc.) by using keepAlive.
 * Fixed CI environment variable support in audit.
-* Censored token in `DEBUG=true` mode to prevent accidental leaks. 
+* Censored token in `DEBUG=true` mode to prevent accidental leaks.
 * Improved error message when there is syntax error in config file.
 * Improved server error handling and messages.
 * Switched from `glob` to `tiny-glob`.
 * Switched from `node-watch` to `chokidar`.
 * `pos-cli sync` is syncing newly created files.
-* `pos-cli sync` is syncing `template-values.json` files inside module directory. 
+* `pos-cli sync` is syncing `template-values.json` files inside module directory.
 
 ## 4.0.4 26 July, 2019
 * Added audit rule for unnecessary brackets after field name.
@@ -45,7 +46,7 @@
 * Updated all npm dependencies.
 * Fixed partial deploy (`-p`) and tightened checks for app and module directories.
 * Fixed deploy on windows.
-* Fixed E2BIG error when server error/log is very big. 
+* Fixed E2BIG error when server error/log is very big.
 
 ## 4.0.0 July 22, 2019
 * 💥 BREAKING 💥 Removed `--config-file` option from all commands. `CONFIG_FILE_PATH` environment variable is working as previously.
