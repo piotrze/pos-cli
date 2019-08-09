@@ -6,6 +6,7 @@
 * Info logger is now communicating using stdout, not stderr.
 * Added 413 `Entity too large` server error support.
 * Added MIT License.
+* Added --force flag to `pos-cli init` to override current directory contents.
 
 ## 4.1.2 31 July 2019
 * Fixed some server errors not showing up in `pos-cli deploy`.

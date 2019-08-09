@@ -23,7 +23,7 @@ program
       })
       .catch(error => {
         report('Init', { extras: [{ key: 'status', value: 'Error' }, { key: 'trace', value: error }] });
-        logger.Error(`Cloning failed. Reason: ${error.message}`);
+        logger.Error(`Init failed. Reason: ${error.message}`);
       });
   });
 
