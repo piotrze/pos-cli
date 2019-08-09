@@ -1,8 +1,7 @@
 const exec = require('../utils/exec');
 const cliPath = require('../utils/cliPath');
 
-const env = { CI: true };
-const run = async args => exec(`${cliPath} ${args}`, { env });
+const run = async args => exec(`${cliPath} ${args}`);
 
 test('should return error for missing command on stdout', async () => {
   let { stderr } = await run('missing');
@@ -72,12 +71,6 @@ test('should run help on modules list', async () => {
   expect(stdout).toMatch('Usage: pos-cli modules list [options] [environment]');
 });
 
-// TODO: Implement
-test.skip('should run help on modules remove', async () => {
-  const { stdout } = await run('modules remove');
-  expect(stdout).toMatch('Usage: pos-cli modules remove [environment] <name>');
-});
-
 test('should run help on sync', async () => {
   const { stdout } = await run('sync');
   expect(stdout).toMatch('Usage: pos-cli sync [options] [environment]');
@@ -86,4 +79,10 @@ test('should run help on sync', async () => {
 test('should run help on init', async () => {
   const { stdout } = await run('init --help');
   expect(stdout).toMatch('Usage: pos-cli init [options]');
+});
+
+// TODO: Implement
+test.skip('should run help on modules remove', async () => {
+  const { stdout } = await run('modules remove');
+  expect(stdout).toMatch('Usage: pos-cli modules remove [environment] <name>');
 });
