@@ -1,0 +1,7 @@
+{
+  "test": {
+    "url": "https://example.com/",
+    "token": "xyz",
+    "email": "test@example.com"
+  }
+}
