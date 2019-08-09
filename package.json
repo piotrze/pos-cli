@@ -85,6 +85,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.2",
     "dotenv": "^8.0.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3"
   }
 }
